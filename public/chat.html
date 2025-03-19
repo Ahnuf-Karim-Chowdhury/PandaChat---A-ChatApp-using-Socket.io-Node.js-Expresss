@@ -3,49 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>ChatCord App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PandaChat App</title>
   </head>
-  <body>
-    <div class="chat-container">
-      <header class="chat-header">
-        <h1><i class="fas fa-smile"></i> ChatCord</h1>
-        <a id="leave-btn" class="btn">Leave Room</a>
+  <body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <div class="w-full max-w-2xl shadow-lg rounded-lg overflow-hidden bg-gray-800">
+      <header class="bg-gray-700 p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold flex items-center">
+          <i class="fas fa-smile text-yellow-400 mr-2"></i> PandaChat
+        </h1>
+        <a id="leave-btn" class="bg-red-500 px-4 py-2 rounded hover:bg-red-600 transition">Leave Room</a>
       </header>
-      <main class="chat-main">
-        <div class="chat-sidebar">
-          <h3><i class="fas fa-comments"></i> Room Name:</h3>
-          <h2 id="room-name"></h2>
-          <h3><i class="fas fa-users"></i> Users</h3>
-          <ul id="users"></ul>
-        </div>
-        <div class="chat-messages"></div>
+      <main class="flex h-80">
+        <aside class="w-1/3 bg-gray-700 p-4 border-r border-gray-600">
+          <h3 class="text-lg font-semibold flex items-center">
+            <i class="fas fa-comments mr-2"></i> Room Name:
+          </h3>
+          <h2 id="room-name" class="text-xl font-bold mt-1"></h2>
+          <h3 class="text-lg font-semibold flex items-center mt-4">
+            <i class="fas fa-users mr-2"></i> Users
+          </h3>
+          <ul id="users" class="mt-2 space-y-1 text-sm"></ul>
+        </aside>
+        <div class="flex-1 p-4 overflow-y-auto chat-messages space-y-2"></div>
       </main>
-      <div class="chat-form-container">
-        <form id="chat-form">
+      <div class="p-4 bg-gray-700">
+        <form id="chat-form" class="flex">
           <input
             id="msg"
             type="text"
             placeholder="Enter Message"
             required
             autocomplete="off"
+            class="flex-1 p-2 rounded-l bg-gray-600 border-none focus:outline-none"
           />
-          <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+          <button class="bg-blue-500 px-4 py-2 rounded-r hover:bg-blue-600 transition">
+            <i class="fas fa-paper-plane"></i>
+          </button>
         </form>
       </div>
     </div>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
-      crossorigin="anonymous"
-    ></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js"></script>
   </body>

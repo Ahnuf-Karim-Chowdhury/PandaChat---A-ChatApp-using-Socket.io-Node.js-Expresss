@@ -3,127 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>PandaChat App</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-      integrity="sha512-d6fy7fP9YksmjUFXX+zz6rjb9ToJ9K5dkH2+tFwRN1BmTrCwpyc5UybjECA37K+9Py1be+DlX4X7BQDKR7fp7A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #212121;
-        color: #333;
-      }
-
-      .join-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 1rem;
-		
-      }
-
-      .join-header {
-        text-align: center;
-        color: #fff;
-        background: #1e90ff;
-        padding: 1rem 0;
-        border-radius: 8px 8px 0 0;
-        width: 100%; 
-        max-width: 1000px;
-        margin: 0 auto; 
-      }
-
-      .join-header h1 {
-        margin: 0;
-      }
-
-      .join-main {
-        background: #424242;
-        padding: 1.5rem;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 400px;
-        width: 100%;
-		text-decoration-color: black;
-      }
-
-      .form-control {
-        margin-bottom: 1.5rem;
-      }
-
-      .form-control label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-		color: white;
-		
-      }
-
-      .form-control input,
-      .form-control select {
-        width: 95%;
-        padding: 0.8rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-		background-color: #E0E0E0;
-      }
-
-      .btn {
-        width: 100%;
-        padding: 0.8rem;
-        border: none;
-        background: #1e90ff;
-        color: #fff;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1rem;
-      }
-
-      .btn:hover {
-        background: #0077cc;
-      }
-    </style>
   </head>
-  <body>
-    <div class="join-container">
-      <div class="join-wrapper">
-        <header class="join-header">
-          <h1><i class="fas fa-smile"></i> PandaChat</h1>
-        </header>
-        <main class="join-main">
-          <form action="chat.html">
-            <div class="form-control">
-              <label for="username">Username</label>
-              <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="Enter username..."
-                required
-              />
-            </div>
-            <div class="form-control">
-              <label for="room">Room</label>
-              <select name="room" id="room">
-                <option value="JavaScript">JavaScript</option>
-                <option value="Python">Python</option>
-                <option value="PHP">PHP</option>
-                <option value="C#">C#</option>
-                <option value="Ruby">Ruby</option>
-                <option value="Java">Java</option>
-              </select>
-            </div>
-            <button type="submit" class="btn">Join Chat</button>
-          </form>
-        </main>
-      </div>
+  <body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+      <header class="bg-gradient-to-r from-blue-500 to-indigo-600 p-5 text-center">
+        <h1 class="text-xl font-bold flex items-center justify-center">
+          <i class="fas fa-smile text-yellow-400 mr-2"></i> PandaChat
+        </h1>
+      </header>
+      <main class="p-6">
+        <form action="chat.html" class="space-y-4">
+          <div>
+            <label for="username" class="block text-gray-300 mb-1">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter username..."
+              required
+              class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:ring focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label for="room" class="block text-gray-300 mb-1">Room</label>
+            <select
+              name="room"
+              id="room"
+              class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600 focus:ring focus:ring-blue-500"
+            >
+              <option value="JavaScript">JavaScript</option>
+              <option value="Python">Python</option>
+              <option value="PHP">PHP</option>
+              <option value="C#">C#</option>
+              <option value="Ruby">Ruby</option>
+              <option value="Java">Java</option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            class="w-full p-3 rounded bg-blue-500 hover:bg-blue-600 transition font-bold"
+          >
+            Join Chat
+          </button>
+        </form>
+      </main>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
   </body>
 </html>

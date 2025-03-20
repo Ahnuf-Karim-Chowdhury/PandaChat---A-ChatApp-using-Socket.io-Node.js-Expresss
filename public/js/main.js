@@ -60,11 +60,31 @@ chatform.addEventListener("submit", (e) => {
 // output Message to DOM
 function outputMessage(message) {
   const div = document.createElement("div");
-  div.classList.add("message");
-  div.innerHTML = `<p class='meta'>${message.name} <span>${message.time}</span></p>
-  <p class='text'> ${message.text} </p>`;
+  div.classList.add(
+    "message",
+    "bg-gray-500",
+    "text-white",
+    "rounded-lg",
+    "p-4",
+    "mb-3",
+    "max-w-lg",
+    "self-start",
+    "break-words",
+    "shadow-md"
+  );
+
+  div.innerHTML = `
+    <p class="meta font-semibold text-sm text-gray-300 mb-1">
+      ${message.name} <span class="text-gray-300 text-xs text-right">${message.time}</span>
+    </p>
+    <p class="text leading-relaxed">
+      ${message.text}
+    </p>
+  `;
+
   document.querySelector(".chat-messages").appendChild(div);
 }
+
 
 // Add Room name to DOM
 function outputRoomName(room) {

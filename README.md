@@ -59,8 +59,25 @@
 4. All clients receive the new message and update their chat windows in real-time.
 
 ---
+## Project UI
 
-## How to Run the Project 🚀
+Here are some screenshots of the PandaChat app:
+
+### Homepage
+![Homepage](https://github.com/Ahnuf-Karim-Chowdhury/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express/blob/main/project%20ui/Screenshot%20(2604).png?raw=true)
+
+### User Insertion
+![Homepage login](https://github.com/Ahnuf-Karim-Chowdhury/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express/blob/main/project%20ui/Screenshot%20(2605).png?raw=true)
+
+### ChatRoom
+![ChatRoom](https://github.com/Ahnuf-Karim-Chowdhury/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express/blob/main/project%20ui/Screenshot%20(2606).png?raw=true)
+
+### ChatRoom Message Example
+![ChatRoom](https://github.com/Ahnuf-Karim-Chowdhury/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express/blob/main/project%20ui/Screenshot%20(2608).png?raw=true)
+
+---
+
+## How to Run the Current Project 🚀
 1. Clone the repository:
    ```bash
    git clone https://github.com/YourUsername/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express.git

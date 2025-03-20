@@ -105,9 +105,9 @@ http://localhost:3000
    ```
 
 ## 🚧 Future Improvements : Coming Soon ⏳
-0. Connect a Database.
-1. Add user authentication for secure chat rooms.
-2. Allow users to share files or images within the chat.
-3. Users will be able to mention each other.
-4.  Provide additional themes and customization options for the UI.
-5.  Deploy the Project.
+1. Connect a Database.
+2. Add user authentication for secure chat rooms.
+3. Allow users to share files or images within the chat.
+4. Users will be able to mention each other.
+5.  Provide additional themes and customization options for the UI.
+6.  Deploy the Project.

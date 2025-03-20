@@ -38,11 +38,10 @@ io.on("connection", (socket) => {
       );
 
     // send users & room info
-    io.to(user.room).emit('roomUsers',{
-        room: user.room,
-        users: getRoomUsers(user.room),
+    io.to(user.room).emit("roomUsers", {
+      room: user.room,
+      users: getRoomUsers(user.room),
     });
-
 
     // listen for the chat-message from the frontend to the server
     socket.on("chatMessage", (msg) => {
@@ -59,6 +58,13 @@ io.on("connection", (socket) => {
           "message",
           formatMessage(botName, `${user.username} has left the chat`)
         );
+
+        // send users & room info
+        io.to(user.room).emit("roomUsers", {
+          room: user.room,
+          users: getRoomUsers(user.room),
+        });
+        
       }
     });
   }); // the `joinRoom` function end

@@ -1,5 +1,17 @@
 const chatform = document.getElementById("chat-form");
 const chatMessages = document.querySelector('.chat-messages') ;
+// Select the "Leave Room" button
+const leaveBtn = document.getElementById("leave-btn");
+
+// Add a click event listener
+leaveBtn.addEventListener("click", () => {
+  const leaveRoom = confirm("Are you sure you want to leave the chat room?");
+  if (leaveRoom) {
+    
+    window.location = 'http://localhost:3000'; 
+  }
+});
+
 
 // getting username & room from the URL
 const {username, room} = Qs.parse(location.search, {
@@ -17,7 +29,7 @@ socket.emit('joinRoom', {username,room});
 
 // Message from server to the frontend
 socket.on("message", (message) => {
-  console.log(message);
+  // console.log(message);
   outputMessage(message);
 
   //every time a message is sent scroll down

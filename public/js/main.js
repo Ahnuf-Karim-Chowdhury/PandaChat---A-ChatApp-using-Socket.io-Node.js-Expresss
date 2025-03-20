@@ -1,7 +1,19 @@
 const chatform = document.getElementById("chat-form");
 const chatMessages = document.querySelector('.chat-messages') ;
 
+// getting username & room from the URL
+const {username, room} = Qs.parse(location.search, {
+  ignoreQueryPrefix: true,
+
+});
+//console.log(location.search);
+
+//console.log(username,room);
+
 const socket = io();
+
+// join chat room
+socket.emit('joinRoom', {username,room});
 
 // Message from server to the frontend
 socket.on("message", (message) => {
@@ -12,7 +24,7 @@ socket.on("message", (message) => {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 
 });
-
+  
 // submit
 chatform.addEventListener("submit", (e) => {
   e.preventDefault();

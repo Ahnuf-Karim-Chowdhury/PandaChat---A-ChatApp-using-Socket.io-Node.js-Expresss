@@ -63,17 +63,22 @@
 
 Here are some screenshots of the PandaChat app:
 
-### Homepage
+<div align="center">
+
+### [ Homepage ]
 ![Homepage](https://github.com/Ahnuf-Karim-Chowdhury/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express/blob/main/project%20ui/Screenshot%20(2604).png?raw=true)
 
-### User Insertion
+### [ User Insertion ]
 ![Homepage login](https://github.com/Ahnuf-Karim-Chowdhury/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express/blob/main/project%20ui/Screenshot%20(2605).png?raw=true)
 
-### ChatRoom
+### [ ChatRoom ]
 ![ChatRoom](https://github.com/Ahnuf-Karim-Chowdhury/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express/blob/main/project%20ui/Screenshot%20(2606).png?raw=true)
 
-### ChatRoom Message Example
+### [ ChatRoom Messages Example ]
 ![ChatRoom](https://github.com/Ahnuf-Karim-Chowdhury/PandaChat-A_ChatApp_using_Socket.io-Node.js-Express/blob/main/project%20ui/Screenshot%20(2608).png?raw=true)
+
+
+</div>
 
 ---
 
